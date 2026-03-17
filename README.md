@@ -17,9 +17,13 @@ Docker/
 │   ├── vite.config.js
 │   └── package.json
 └── node-docker/           # Express.js backend
+|   ├── Dockerfile
+|   ├── server.js
+|   └── package.json
+└── fastapi-docker/        # FastAPI backend
     ├── Dockerfile
-    ├── server.js
-    └── package.json
+    ├── main.js
+    └── requirements.txt
 ```
 
 ---
@@ -110,6 +114,10 @@ services:
     build: ./node-docker
     ports:
       - 8000:8000
+  fastapi-app:
+    build: ./fastapi-docker
+    ports:
+      -1010:1010
 ```
 
 ---
@@ -138,6 +146,14 @@ docker compose down
 
 # Stop and remove containers + volumes
 docker compose down -v
+
+# To build individual containers
+docker build -t app-name .
+
+# To start individual containers
+docker run -p 8000:8000 app-name
+
+
 ```
 
 ---
