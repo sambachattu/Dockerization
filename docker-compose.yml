@@ -8,3 +8,7 @@ services:
     build: ./node-docker
     ports:
       - 8000:8000
+  fastapi-app:
+    build: ./fastapi-docker
+    ports:
+      - 1010:1010
