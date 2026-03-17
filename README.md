@@ -34,6 +34,7 @@ Docker/
 |---|---|---|---|
 | `react-app` | React + Vite + Nginx | `3000` | `80` |
 | `express-app` | Node.js + Express | `8000` | `8000` |
+| `fastapi-app` | python + FastAPI | `1010` | `1010` |
 
 ---
 
@@ -65,6 +66,7 @@ docker compose up --build
 |---|---|
 | React Frontend | http://localhost:3000 |
 | Express Backend | http://localhost:8000 |
+| FastAPI Backend | http://localhost:1010 |
 
 ### 4. Stop the services
 
