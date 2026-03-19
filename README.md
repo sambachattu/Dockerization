@@ -124,6 +124,29 @@ services:
 
 ---
 
+## Testing
+
+### FastAPI Backend
+The FastAPI project includes automated tests in `fastapi-docker/tests.py`, covering the existing `GET`, `POST`, and `PUT` endpoints to ensure endpoints are functional.
+
+To run the tests locally:
+
+1. Navigate to the `fastapi-docker` directory:
+   ```bash
+   cd fastapi-docker
+   ```
+2. Activate the virtual environment:
+   ```bash
+   .\.venv\Scripts\activate   # On Windows
+   # source .venv/bin/activate # On Unix/macOS
+   ```
+3. Execute `pytest`:
+   ```bash
+   pytest tests.py
+   ```
+
+---
+
 ## Useful Commands
 
 ```bash
